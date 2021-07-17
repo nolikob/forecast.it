@@ -1,0 +1,14 @@
+.Result {
+	display: flex;
+	flex-flow: row nowrap;
+	padding: 1rem;
+	justify-content: space-between;
+	align-items: center;
+
+	&-headline {
+		display: flex;
+		justify-content: flex-start;
+		align-items: baseline;
+		line-height: 1.5;
+	}
+}

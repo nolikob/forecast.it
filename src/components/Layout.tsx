@@ -7,11 +7,11 @@ export interface LayoutProps {
 export default function Layout({ children }: LayoutProps): JSX.Element {
     return (
         <div className={"Layout"}>
-            <section>
+            <section className={"Layout-top"}>
                 <Link to={"/"}>Forecast.it</Link>
             </section>
-            <main>
-                <aside>
+            <main className={"Layout-wrapper"}>
+                <aside className={"Layout-sideNavigation"}>
                     <Link to={"/location"}>
                         Location
                     </Link>
@@ -19,7 +19,7 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
                         Favourite
                     </Link>
                 </aside>
-                <section>
+                <section className={"Layout-content"}>
                     { children }
                 </section>
             </main>
