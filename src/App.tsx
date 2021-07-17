@@ -3,7 +3,9 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+
 import Layout from "./components/Layout";
+import Location from "./pages/Location";
 
 const App = (): JSX.Element => {
   return (
@@ -11,13 +13,13 @@ const App = (): JSX.Element => {
       <Layout>
         <Switch>
           <Route exact path={"/location"}>
-            <>location</>
+            <Location />
           </Route>
           <Route exact path={"/favourite"}>
             <>favorite</>
           </Route>
           <Route exact path={"/"}>
-            <>location</>
+            <Location />
           </Route>
         </Switch>
       </Layout>

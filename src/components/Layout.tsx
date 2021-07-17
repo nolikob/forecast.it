@@ -6,7 +6,7 @@ export interface LayoutProps {
 
 export default function Layout({ children }: LayoutProps): JSX.Element {
     return (
-        <>
+        <div className={"Layout"}>
             <section>
                 <Link to={"/"}>Forecast.it</Link>
             </section>
@@ -23,6 +23,6 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
                     { children }
                 </section>
             </main>
-        </>
+        </div>
     )
 }

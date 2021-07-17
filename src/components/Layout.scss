@@ -1,0 +1,21 @@
+.Layout {
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+
+	> main {
+		display: flex;
+		flex-direction: row;
+		padding: 1rem 0;
+	}
+
+	aside {
+		flex-basis: 20%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	section {
+		flex-grow: 1;
+	}
+}
