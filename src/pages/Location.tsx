@@ -1,20 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext, useState } from "react";
 // import { getLocations, getWeatherInformation } from "../api/api";
 import { locations } from "../static.js";
+import AppContext from "../context";
 
 import type { Forecast, Location as LocationType } from "../types";
 
 const Location = (): JSX.Element => {
 	const [ query, setQuery ] = useState<string>("");
-	// const [ locations ] = useState<LocationType[]>(locs);
-	const [ locationKey, setLocationKey ] = useState<string>("");
 	const [ weatherInformation ] = useState<null | Forecast>(null);
 
-	useEffect(() => {
-		if (locationKey !== "") {
-			// getWeatherInformation(locationKey, setWeatherInformation);
-		}
-	}, [ locationKey ]);
+	const { setFavouriteKey } = useContext(AppContext);
 
     return (
         <div className={"Location"}>
@@ -37,7 +32,7 @@ const Location = (): JSX.Element => {
 						<h3>{location.LocalizedName}</h3>
 						<span>{String(location.Country.LocalizedName)}</span>
 					</span>
-					<button type={"button"} onClick={() => setLocationKey(location.Key)} className={"Button Button-secondary Result-cta"}>
+					<button type={"button"} onClick={() => setFavouriteKey(location.Key)} className={"Button Button-secondary Result-cta"}>
 						Set as home
 					</button>
 				</li>)}

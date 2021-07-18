@@ -1,15 +1,35 @@
+import { useContext, useEffect, useState } from "react";
 import * as dayjs from "dayjs";
+
 import { forecast1day, forecast5days, locations } from "../static";
+import AppContext from "../context";
+import type { Forecast } from "../types";
+import { getWeatherInformation, get5DayWeatherInformation } from "../api/api";
 
 const Favourite = (): JSX.Element => {
-	const { Headline, DailyForecasts } = forecast1day;
 	const location = locations[0];
+	
+	const [ dayForecast, setDayForecast ] = useState<Forecast>(forecast1day);
+	const [ fiveDayForecast, setFiveDayForecast ] = useState<Forecast>(forecast5days);
+	const { Headline, DailyForecasts } = dayForecast;
 	const min = DailyForecasts[0].Temperature.Minimum;
 	const max = DailyForecasts[0].Temperature.Maximum;
-	const futureForecasts = forecast5days.DailyForecasts;
+	const futureForecasts = fiveDayForecast.DailyForecasts;
+	
+	const { favouriteKey } = useContext(AppContext);
+
+	useEffect(() => {
+		// API requests to get 1 day forecast and 5 day forecast
+		// not making requests due to accuweather limitations, using stored constants instead
+		// if (favouriteKey !== null) {
+		// 	getWeatherInformation(favouriteKey, setDayForecast);
+		// 	get5DayWeatherInformation(favouriteKey, setFiveDayForecast)
+		// }
+	}, [ favouriteKey ]);
 
 	return (
 		<div className={"Favourite"}>
+			{favouriteKey !== null ? <>
 			<div className={"Favourite-header"}>
 				<h1>{location.LocalizedName}</h1>,&nbsp;{location.Region.LocalizedName}
 			</div>
@@ -77,6 +97,9 @@ const Favourite = (): JSX.Element => {
 					</div>
 				</div>
 			</div>
+			</> : <div className="Favourite-header">
+				<h1>Please select favourite location to see forecast detail</h1>
+			</div>}
 		</div>
 	)
 };
