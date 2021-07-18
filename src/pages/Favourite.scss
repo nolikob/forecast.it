@@ -1,0 +1,116 @@
+.Favourite {
+	margin: 0 -.5rem;
+
+	&-header {
+		padding: 0 .5rem;
+		h1 {
+			display: inline-block;
+		}
+	}
+
+	&-content {
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	&-block {
+		padding: .5rem;
+		display: flex;
+		height: 100%;
+	}
+
+	&-dayNightWrapper {
+		display: flex;
+		flex-flow: row nowrap;
+		width: 100%;
+	}
+
+	&-block--half {
+		width: 50%;
+	}
+
+	&-block--third {
+		width: calc(100%/3);
+		height: auto;
+	}
+
+	&-mainBlock {
+		width: 100%;
+		height: 10rem;
+	}
+
+	&-futureForecast {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+
+		> h2 {
+			padding: 0 .5rem;
+		}
+	}
+
+	&-forecasts {
+		width: 100%;
+		flex-flow: row wrap;
+		overflow-x: auto;
+		display: flex;
+		height: 15rem;
+	}
+
+	&-boxWrapper {
+		padding: 1rem;
+		background-color: #172AFA;
+		width: 100%;
+		border-radius: .5rem;
+		color: #FFFFFF;
+		display: flex;
+		flex-flow: row nowrap;
+		overflow: hidden;
+	}
+
+	&-minMaxInfo {
+		font-size: .75rem;
+	}
+
+	&-boxWrapperHeader {
+		margin-bottom: auto;
+		text-align: center;
+	}
+
+	&-boxWrapper--secondary {
+		background: #FFFFFF;
+		flex-direction: column;
+		color: #454C67;
+	}
+
+	&-info {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: space-between;
+		flex-basis: 65%;
+
+		> ul {
+			list-style: none;
+			font-size: 1rem;
+			display: flex;
+
+			> li {
+				margin-right: 1rem;
+			}
+		}
+	}
+
+	&-temperatureWrapper {
+		height: 100%;
+		flex-basis: 35%;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	&-temperature {
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 2rem;
+	}
+}

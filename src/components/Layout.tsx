@@ -8,7 +8,7 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
     return (
         <div className={"Layout"}>
             <section className={"Layout-top"}>
-                <Link to={"/"}>Forecast.it</Link>
+                <Link to={"/"} className={"Layout-brand"}>Forecast.it</Link>
             </section>
             <main className={"Layout-wrapper"}>
                 <aside className={"Layout-sideNavigation"}>

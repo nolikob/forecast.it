@@ -6,6 +6,7 @@ import {
 
 import Layout from "./components/Layout";
 import Location from "./pages/Location";
+import Favourite from "./pages/Favourite";
 
 const App = (): JSX.Element => {
   return (
@@ -16,7 +17,7 @@ const App = (): JSX.Element => {
             <Location />
           </Route>
           <Route exact path={"/favourite"}>
-            <>favorite</>
+            <Favourite />
           </Route>
           <Route exact path={"/"}>
             <Location />

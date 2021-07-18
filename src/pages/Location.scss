@@ -5,6 +5,11 @@
 	border: 0;
 	padding: 0;
 	margin: 0;
+	justify-content: flex-start;
+
+	&-headline {
+		height: 10%;
+	}
 
 	&-inputWrapper {
 		display: flex;
@@ -14,6 +19,7 @@
 		border-radius: 2rem;
 		font-size: 1rem;
 		height: 4rem;
+		height: 10%;
 	}
 
 	&-input {
@@ -22,7 +28,7 @@
 		display: flex;
 		flex: 1;
 		border-bottom: 1px solid #e6e9ef;
-		height: 2rem;
+		height: 100%;
 	}
 
 	&-results {
@@ -30,11 +36,10 @@
 		flex-direction: column;
 		list-style: none;
 		overflow-y: auto;
-		margin-top: 1rem;
+		height: 80%;
 	}
 
 	&-result {
-		margin-top: 1rem;
-		min-height: 4rem;
+		margin-bottom: 1rem;
 	}
 }
