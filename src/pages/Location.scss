@@ -6,7 +6,7 @@
 	padding: 0;
 	margin: 0;
 
-	&-form {
+	&-inputWrapper {
 		display: flex;
 		justify-content: center;
 		align-items: stretch;
@@ -22,7 +22,6 @@
 		display: flex;
 		flex: 1;
 		border-bottom: 1px solid #e6e9ef;
-		margin-right: 2rem;
 		height: 2rem;
 	}
 
@@ -31,9 +30,11 @@
 		flex-direction: column;
 		list-style: none;
 		overflow-y: auto;
+		margin-top: 1rem;
 	}
 
 	&-result {
 		margin-top: 1rem;
+		min-height: 4rem;
 	}
 }

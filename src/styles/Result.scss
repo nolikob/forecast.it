@@ -2,13 +2,27 @@
 	display: flex;
 	flex-flow: row nowrap;
 	padding: 1rem;
+	height: auto;
+	flex: 1;
 	justify-content: space-between;
 	align-items: center;
+	background-color: #FFFFFF;
+	border-radius: .5rem;
 
 	&-headline {
 		display: flex;
-		justify-content: flex-start;
-		align-items: baseline;
+		flex-direction: column;
 		line-height: 1.5;
+
+		> span {
+			font-size: .75rem;
+			white-space: pre-wrap;
+		}
+	}
+
+	&-cta {
+		padding: .5rem 1rem;
+		border-radius: 1rem;
+		font-size: 1rem;
 	}
 }

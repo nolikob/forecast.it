@@ -12,10 +12,10 @@ export default function Layout({ children }: LayoutProps): JSX.Element {
             </section>
             <main className={"Layout-wrapper"}>
                 <aside className={"Layout-sideNavigation"}>
-                    <Link to={"/location"}>
+                    <Link to={"/location"} className={"Layout-link"}>
                         Location
                     </Link>
-                    <Link to={"/favourite"}>
+                    <Link to={"/favourite"} className={"Layout-link"}>
                         Favourite
                     </Link>
                 </aside>

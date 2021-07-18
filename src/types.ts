@@ -54,7 +54,7 @@ export interface Headline {
 export interface Location {
     Version:                number;
     Key:                    string;
-    Type:                   string;
+    Type:                   Type;
     Rank:                   number;
     LocalizedName:          string;
     EnglishName:            string;
@@ -66,7 +66,7 @@ export interface Location {
     GeoPosition:            GeoPosition;
     IsAlias:                boolean;
     SupplementalAdminAreas: SupplementalAdminArea[];
-    DataSets:               string[];
+    DataSets:               DataSet[];
 }
 
 export interface AdministrativeArea {
@@ -85,6 +85,23 @@ export interface Country {
     EnglishName:   string;
 }
 
+export enum DataSet {
+    AirQuality = "AirQuality",
+    AirQualityCurrentConditions = "AirQualityCurrentConditions",
+    AirQualityForecasts = "AirQualityForecasts",
+    AirQualityRegional = "AirQuality-Regional",
+    Alerts = "Alerts",
+    DailyAirQualityForecast = "DailyAirQualityForecast",
+    DailyLocalIndices = "DailyLocalIndices",
+    DailyPollenForecast = "DailyPollenForecast",
+    ForecastConfidence = "ForecastConfidence",
+    FutureRadar = "FutureRadar",
+    HourlyLocalIndices = "HourlyLocalIndices",
+    MinuteCast = "MinuteCast",
+    PremiumAirQuality = "PremiumAirQuality",
+    Radar = "Radar",
+}
+
 export interface GeoPosition {
     Latitude:  number;
     Longitude: number;
@@ -98,8 +115,13 @@ export interface Elevation {
 
 export interface Imperial {
     Value:    number;
-    Unit:     string;
+    Unit:     Unit;
     UnitType: number;
+}
+
+export enum Unit {
+    Ft = "ft",
+    M = "m",
 }
 
 export interface SupplementalAdminArea {
@@ -113,5 +135,5 @@ export interface TimeZone {
     Name:             string;
     GmtOffset:        number;
     IsDaylightSaving: boolean;
-    NextOffsetChange: Date;
+    NextOffsetChange: Date | null;
 }

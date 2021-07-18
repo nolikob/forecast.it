@@ -14,7 +14,7 @@
 	&-sideNavigation {
 		display: flex;
 		flex-direction: row;
-		background-color: #F4F7F8;
+		background-color: #1d2643;
 		border-radius: 1rem;
 		align-items: center;
 		justify-content: space-evenly;
@@ -33,6 +33,13 @@
 		flex-direction: column;
 		overflow-y: hidden;
 	}
+
+	&-link {
+		text-transform: uppercase;
+		color: #a8b9c1;
+		text-decoration: none;
+
+	}
 }
 
 @media screen and (min-width: 992px) {
@@ -47,6 +54,11 @@
 			margin-right: 2rem;
 			flex-direction: column;
 			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		&-link {
+			margin: 1rem;
 		}
 	}
 }
