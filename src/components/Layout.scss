@@ -14,7 +14,7 @@
 	&-sideNavigation {
 		display: flex;
 		flex-direction: row;
-		background-color: #1d2643;
+		background-color: #464D60;
 		border-radius: 1rem;
 		align-items: center;
 		justify-content: space-evenly;
@@ -44,7 +44,7 @@
 
 	&-link {
 		text-transform: uppercase;
-		color: #a8b9c1;
+		color: #FFFFFF;
 		text-decoration: none;
 
 	}
@@ -68,5 +68,12 @@
 		&-link {
 			margin: 1rem;
 		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.Layout {
+		padding: 2rem;
+		padding-top: 1rem;
 	}
 }

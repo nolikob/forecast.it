@@ -11,6 +11,7 @@
 	&-content {
 		display: flex;
 		flex-flow: row wrap;
+		align-items: stretch;
 	}
 
 	&-block {
@@ -59,7 +60,7 @@
 
 	&-boxWrapper {
 		padding: 1rem;
-		background-color: #172AFA;
+		background-color: #B4C8DE;
 		width: 100%;
 		border-radius: .5rem;
 		color: #FFFFFF;
@@ -112,5 +113,35 @@
 		text-transform: uppercase;
 		font-weight: 700;
 		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.Favourite {
+		&-block--third {
+			width: 20%;
+			height: auto;
+		}
+
+		&-mainBlock {
+			height: 15rem;
+		}
+
+		&-forecasts {
+			height: auto;
+		}
+
+		&-mainBlock {
+			width: 50%;
+		}
+
+		&-dayNightWrapper {
+			flex-direction: column;
+			width: 50%;
+
+			> .Favourite-block {
+				width: 100%;
+			}
+		}
 	}
 }

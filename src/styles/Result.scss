@@ -2,7 +2,6 @@
 	display: flex;
 	flex-flow: row nowrap;
 	padding: 1rem;
-	flex: 1;
 	justify-content: space-between;
 	align-items: center;
 	background-color: #FFFFFF;
@@ -28,5 +27,7 @@
 		padding: .5rem 1rem;
 		border-radius: 1rem;
 		font-size: 1rem;
+		background: #464D60;
+		color: #FFFFFF;
 	}
 }
